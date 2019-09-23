@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from 'react-icons-kit';
 import { ic_search } from 'react-icons-kit/md/ic_search'
-import '../App.css';
+
 
 
 class Header extends Component {

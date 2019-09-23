@@ -1,15 +1,21 @@
 import React from 'react';
-import './App.css';
 import Header from './components/Header';
-import Showcase from './components/Showcase';
+import Footer from './components/Footer';
+import CharacterPanel from './components/CharacterPanel';
+import ShowcaseCarousel from './components/ShowcaseCarousel';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 function App() {
-  return (
+    return (
+      <Router>
       <div className="App">
           <Header />
-          <Showcase/>
-      </div>
+          <CharacterPanel />
+          <ShowcaseCarousel/>
+          <Footer />
+            </div>
+            </Router>
   );
 }
 
