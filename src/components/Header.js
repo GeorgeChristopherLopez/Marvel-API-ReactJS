@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from 'react-icons-kit';
-import { ic_search } from 'react-icons-kit/md/ic_search'
-
+import { ic_search } from 'react-icons-kit/md/ic_search';
+import { Link } from 'react-router-dom';
 
 
 class Header extends Component {
@@ -13,20 +13,20 @@ class Header extends Component {
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <a className="navbar-brand" href="#">Marvel</a>
+                    <Link className="navbar-brand" to="\">Marvel</Link>
                     <div className="offset-1"></div>
 
 
                     <div className="collapse navbar-collapse" id="navbarToggler">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                                <Link className="nav-link" to="\">Home <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Characters</a>
+                                <Link className="nav-link" to="\">Characters</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Comics</a>
+                                <Link className="nav-link" to="\">Comics</Link>
                             </li>
                         </ul> 
                     </div>
