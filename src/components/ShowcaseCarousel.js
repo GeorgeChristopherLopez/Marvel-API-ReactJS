@@ -25,62 +25,67 @@ class ShowcaseCarousel extends Component {
 
         return (
 
-            <Carousel className="showcaseCarousel"style={carouselStyle} >
+            <section style={carouselStyle}>
 
-                <Carousel.Item >
-                    <div className="row">
-                        <div  style={caption} >
-                            <h3>Captain America</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </div>
-                        <div>
-                            <img
-                                className="carousel-img"
-                                src="http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg"
-                                alt="First slide"
-                            />
-                        </div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div style={carouselItemInner}>
+
+                                <div className="caption">
+                                    <h5>Spider-Man</h5>
+                                    <p>Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities. Taught that with great power comes great responsibility, Spidey has vowed to use his powers to help people.</p>
+                                </div>
+                                <img src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg" alt="..." />
+
+
+                            </div>
+                                                   </div>
+
+                        <div class="carousel-item">
+                            <div style={carouselItemInner}>
+
+                                <div className='caption'>
+                                <h5>Mary Jane Watson</h5>
+                                <p>Mary Jane Watson was the guiding light in Peter Parker's life, and their love had overcome countless obstacles.</p>
+                                </div>
+                                <img src="http://i.annihil.us/u/prod/marvel/i/mg/2/03/528d33d000749.jpg" alt="..." />
+                            </div>
+                            </div>
+
+                        <div class="carousel-item">
+
+                            <div style={carouselItemInner}>
+
+                                <div className="caption">
+                                    <h5>Iron Man</h5>
+                                    <p>something something ironman something something</p>
+                                </div>
+                                <div>
+                                    <img src="http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6.jpg" alt="..." /></div>
+
+
+
+                            </div>
+                                                    </div>
+
                     </div>
-
-
-
-
-                                                                
-                    </Carousel.Item>
-
-                <Carousel.Item >
-                    <div className="row">
-                        <div className="col-xs-8" style={caption} >
-                            <h3>Captain America</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </div>
-                        <div className="col-xs-4">
-                            <img
-                        
-                                src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/standard_xlarge.jpg"
-                                alt="First slide"
-                            />
-                        </div>
-                    </div>
-
-                    </Carousel.Item>
-                <Carousel.Item>
-                    <div className="row" >
-                        <div className="col-xs-6" style={caption}>
-                            <h3>THOR</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </div>
-                        <div className="col-xs-6" >
-                            <img
-                                className="carousel-img"
-                                src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/standard_xlarge.jpg"
-                                alt="First slide"
-                            />
-                        </div>
-                    </div>
-                    </Carousel.Item>
-                </Carousel>
-
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+            </section>
 
 
 
@@ -94,24 +99,18 @@ class ShowcaseCarousel extends Component {
 export default ShowcaseCarousel;
 
 const carouselStyle = {
-    background: 'red',
-    padding: '5rem',
-
+    background: '#2F2F2F',
+    padding: '1rem',
+    color: '#fff',
+    'min-height': '350px'
 
 }
 
+const carouselItemInner = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)'
 
 
-const image = {
-    width: '66%',
-  
+
 }
-
-const caption = {
-    margin: '2rem 1.5rem 0',
-
-    width: '33%'
-}
-
-
 

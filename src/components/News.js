@@ -9,9 +9,12 @@ class News extends Component {
         const Marvelkey = '099657800af174d95a17e1f2b89db4fa';
         const newsKey = '0f5aaaf46c6943a196e19b750f199b32';
         var url = 'https://newsapi.org/v2/everything?' +
-            'q=Marvel_Comics&' +
-
+            'q=marvel%20comics&' +
+            'language=en&'+
+            'from=2019-09-27&' +
+            'sortBy=popularity&' +
             'apiKey=0f5aaaf46c6943a196e19b750f199b32';
+
 
         var req = new Request(url);
 
@@ -23,25 +26,26 @@ class News extends Component {
         return (
 
 
-            <section >
+            <section className="news-section">
                 <div className="container">
+                    <h1>The News</h1>
                     <div className="news">
 
-                    <div className="news-card">
-                            <div className="thumbnail"><img src="https://amp.businessinsider.com/images/5d8bbacc2e22af4171056976-1136-568.jpg" alt="img" /></div>
-                            <div className="title"><p>We compared the top movie franchises at 6 major Hollywood studios, from Disney to Paramount</p></div>
+                        <div className="news-card">
+                            <div className="thumbnail"><img src="https://i.kinja-img.com/gawker-media/image/upload/s--X1PNBRXV--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/pw5dos9s8u58qtpvkg8z.png" alt="img" /></div>
+                            <div className="title"><p>Powers of X Just Galaxy Brained This Shit</p></div>
                         </div>
 
 
                         <div className="news-card">
-                            <div className="thumbnail"><img src="https://gamespot1.cbsistatic.com/uploads/screen_kubrick/43/434805/3584634-rise-of-skywalker-poster-tall.jpg" alt="img" /></div>
-                            <div className="title"><p>Marvel's Kevin Feige is working on a new Star Wars movie</p></div>
+                            <div className="thumbnail"><img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/spiderman-farfromhome-charity.jpg" alt="img" /></div>
+                            <div className="title"><p>Spider-Man Will Stay in the Marvel Cinematic Universe As Disney and Sony Announce New Deal</p></div>
                         </div>
 
 
-                        <div className="news-card">
-                            <div className="thumbnail"><img src="https://gamespot1.cbsistatic.com/uploads/screen_kubrick/43/434805/3584634-rise-of-skywalker-poster-tall.jpg" alt="img" /></div>
-                            <div className="title"><p>Marvel's Kevin Feige is working on a new Star Wars movie</p></div>
+                        <div className="news-card" >
+                            <div className="thumbnail"><img src="https://nerdist.com/wp-content/uploads/2019/09/HOUSE_POWER_OF_X_HC.jpg" alt="img" /></div>
+                            <div className="title"><p>Which 7 X-Men Characters are the Mystery Mutants of POWERS OF X?</p></div>
                         </div>
 
                     </div>
@@ -58,3 +62,8 @@ class News extends Component {
 }
 
 export default News;
+
+
+
+
+

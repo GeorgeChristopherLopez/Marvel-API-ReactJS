@@ -63,7 +63,7 @@ const showcaseStyle = {
 
 const imageStyle = {
     width: '100%',
-    height: '175px'
+    
 }
 
 const captionStyle = {
