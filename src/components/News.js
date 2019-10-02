@@ -3,25 +3,58 @@ import React, { Component } from 'react';
 
 
 class News extends Component {
+    state = {
+        posts: [],
+
+    }
 
 
-    render() {
+    componentDidMount() {
         const Marvelkey = '099657800af174d95a17e1f2b89db4fa';
         const newsKey = '0f5aaaf46c6943a196e19b750f199b32';
         var url = 'https://newsapi.org/v2/everything?' +
-            'q=marvel%20comics&' +
-            'language=en&'+
+            'q=+Marvel+Comics&' +
+            'language=en&' +
             'from=2019-09-27&' +
             'sortBy=popularity&' +
             'apiKey=0f5aaaf46c6943a196e19b750f199b32';
 
 
-        var req = new Request(url);
 
-        fetch(req)
-            .then(function (response) {
-                console.log(response.json());
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const posts = data.articles.slice(0, 5);
+                const updatedPosts = posts.map(post => {
+                    return {
+                        ...post,
+                    }
+                })
+              
+                this.setState({ posts: updatedPosts })
+                console.log(this.state.posts);
             })
+
+            .catch(function () {
+                alert('error');
+            })
+
+
+    }
+
+    render() {
+        {/*
+            let posts = this.state.posts.map(post => {
+                return <Post
+                    source={post.source}
+                    description={post.description}
+                    title={post.title}
+                    url={post.url}
+                    image={post.urlToImage} />;
+            });
+        };
+    */}
 
         return (
 

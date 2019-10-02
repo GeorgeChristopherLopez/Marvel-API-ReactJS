@@ -71,7 +71,7 @@ class Footer extends Component {
 export default Footer;
 
 const footer = {
-    background: '#2F2F2F'
+    background: '#000000'
 }
 const copyrightStyle = {
     padding: '.25rem',
