@@ -10,14 +10,14 @@ class News extends Component {
 
 
     componentDidMount() {
-        const Marvelkey = '099657800af174d95a17e1f2b89db4fa';
+      
         const newsKey = '0f5aaaf46c6943a196e19b750f199b32';
         var url = 'https://newsapi.org/v2/everything?' +
             'q=+Marvel+Comics&' +
             'language=en&' +
             'from=2019-09-27&' +
             'sortBy=popularity&' +
-            'apiKey=0f5aaaf46c6943a196e19b750f199b32';
+            `apiKey=${newsKey}`;
 
 
 

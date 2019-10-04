@@ -6,36 +6,45 @@ class ShowcaseCarousel extends Component {
    
 
     render() {
-        const Marvelkey = '099657800af174d95a17e1f2b89db4fa';
-        const newsKey = '0f5aaaf46c6943a196e19b750f199b32';
-        var url = 'https://newsapi.org/v2/everything?' +
-     
-            'q=marvel&' +
-            'from=2019-09-26&' +
-            'sortBy=popularity&' +
-            'apiKey=0f5aaaf46c6943a196e19b750f199b32';
-
-        var req = new Request(url);
-
-        fetch(req)
-            .then(function (response) {
-                let data = response.json();
-                console.log(data);
+        const ts = 'timestamp';
+        const publicKey = '099657800af174d95a17e1f2b89db4fa';
+        const privateKey = '3416fc3f058a9ed4b162bd282d08b9b49d62075d';
+        const hash = 'f257af55c3ae44ed8630b7928124f143';
+        const url = 'https://gateway.marvel.com/v1/public/characters?'+
+            `ts=${ts}&` +
+            `apikey=${publicKey}&` +
+            `hash=${hash}`;
+   
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
             })
+
+       
+       
+ 
+
+
+    
+
+
+
+    
 
         return (
 
             <section style={carouselStyle}>
                 <h1>Spotlight: Spiderman</h1>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
+                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                    <ol className="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner">
+                    <div className="carousel-inner">
 
-                        <div class="carousel-item active">
+                        <div className="carousel-item active">
                             <div style={carouselItemInner}>
 
                                 <div className="caption">
@@ -48,7 +57,7 @@ class ShowcaseCarousel extends Component {
                             </div>
                                                    </div>
 
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             <div style={carouselItemInner}>
 
                                 <div className='caption'>
@@ -59,7 +68,7 @@ class ShowcaseCarousel extends Component {
                             </div>
                             </div>
 
-                        <div class="carousel-item">
+                        <div className="carousel-item">
 
                             <div style={carouselItemInner}>
 
@@ -76,13 +85,13 @@ class ShowcaseCarousel extends Component {
                                                     </div>
 
                     </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
+                                <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span className="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
+                                <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span className="sr-only">Next</span>
                                 </a>
                             </div>
             </section>
