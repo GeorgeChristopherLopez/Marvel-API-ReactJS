@@ -44,7 +44,7 @@ class News extends Component {
     }
 
     render() {
-        {/*
+        /*
             let posts = this.state.posts.map(post => {
                 return <Post
                     source={post.source}
@@ -54,7 +54,7 @@ class News extends Component {
                     image={post.urlToImage} />;
             });
         };
-    */}
+    */
 
         return (
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+
 
 
 class ShowcaseCarousel extends Component {
@@ -8,9 +8,9 @@ class ShowcaseCarousel extends Component {
     render() {
         const ts = 'timestamp';
         const publicKey = '099657800af174d95a17e1f2b89db4fa';
-        const privateKey = '3416fc3f058a9ed4b162bd282d08b9b49d62075d';
+      //  const privateKey = '3416fc3f058a9ed4b162bd282d08b9b49d62075d';
         const hash = 'f257af55c3ae44ed8630b7928124f143';
-        const url = 'https://gateway.marvel.com/v1/public/characters?'+
+        const url = 'https://gateway.marvel.com/v1/public/comics/6746/characters?' +
             `ts=${ts}&` +
             `apikey=${publicKey}&` +
             `hash=${hash}`;
@@ -18,7 +18,9 @@ class ShowcaseCarousel extends Component {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                let results = data.data.results;
+
+                console.log(results)
             })
 
        
@@ -38,7 +40,7 @@ class ShowcaseCarousel extends Component {
                 <h1>Spotlight: Spiderman</h1>
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                     <ol className="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
@@ -111,7 +113,7 @@ const carouselStyle = {
     background: '#2F2F2F',
     padding: '1rem',
     color: '#fff',
-    'min-height': '350px'
+    minHeight: '350px'
 
 }
 

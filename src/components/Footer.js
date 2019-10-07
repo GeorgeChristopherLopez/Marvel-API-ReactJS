@@ -73,10 +73,7 @@ export default Footer;
 const footer = {
     background: '#000000'
 }
-const copyrightStyle = {
-    padding: '.25rem',
-    textAlign: 'center'
-}
+
 
 const columns = {
     display: 'flex'
