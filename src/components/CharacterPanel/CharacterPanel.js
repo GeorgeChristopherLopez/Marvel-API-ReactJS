@@ -8,7 +8,7 @@ class CharacterPanel extends Component {
             <section style={showcaseSectionStyle} className="showcase">
 
                 <div className="row mx-5">
-                   <h1>The Avengers</h1>
+                   <h1>Get To Know: The Avengers</h1>
                     <div style={showcaseStyle}>
                 <div className="hero-card">
                             <img style={imageStyle} src="http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg" alt="First Hero" />

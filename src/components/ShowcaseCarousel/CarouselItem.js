@@ -6,10 +6,10 @@ class CarouselItems extends Component {
         return <div key={this.props.character.id} className={"carousel-item " + (this.props.character.id === 0 ? 'active' : '')}>
             <div style={carouselItemInner}>
                 <div className="caption">
-                    <h5>{this.props.character.name}</h5>
+                    <h3>{this.props.character.name}</h3>
                     <p>{this.props.character.description}</p>
                 </div>
-                <img src={this.props.image} alt={this.props.character.name} />
+                <img src={this.props.image} className="rounded img-fluid" alt={this.props.character.name} />
             </div>
         </div>
     }

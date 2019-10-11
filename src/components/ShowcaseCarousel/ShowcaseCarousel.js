@@ -9,46 +9,7 @@ class ShowcaseCarousel extends Component {
 
         this.state = {
             characters: null,
-            carouselItems: <React.Fragment>    <div className="carousel-item active">
-                <div style={carouselItemInner}>
-                    <div className="caption">
-                        <h5>Spider-Man</h5>
-                        <p>Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities. Taught that with great power comes great responsibility, Spidey has vowed to use his powers to help people.</p>
-                    </div>
-                    <img src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg" alt="..." />
-                </div>
-            </div>
-
-                <div className="carousel-item">
-                    <div style={carouselItemInner}>
-
-                        <div className='caption'>
-                            <h5>Mary Jane Watson</h5>
-                            <p>Mary Jane Watson was the guiding light in Peter Parker's life, and their love had overcome countless obstacles.</p>
-                        </div>
-                        <img src="http://i.annihil.us/u/prod/marvel/i/mg/2/03/528d33d000749.jpg" alt="..." />
-                    </div>
-                </div>
-
-                <div className="carousel-item">
-
-                    <div style={carouselItemInner}>
-
-                        <div className="caption">
-                            <h5>Iron Man</h5>
-                            <p>something something ironman something something</p>
-                        </div>
-                        <div>
-                            <img src="http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6.jpg" alt="..." /></div>
-
-
-
-                    </div>
-                </div>
-
-
-
-                </React.Fragment>
+            carouselItems: null,
         }
 
 
@@ -166,15 +127,15 @@ const carouselStyle = {
     background: '#2F2F2F',
     padding: '1rem',
     color: '#fff',
-    minHeight: '350px'
+    margin: '1rem'
 
 }
 
 const carouselItemInner = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)'
-
-
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    margin: '2rem',
+    marginBottom: '10rem'
 
 }
 
