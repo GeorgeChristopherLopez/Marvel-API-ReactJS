@@ -35,6 +35,7 @@ class ShowcaseCarousel extends Component {
         fetch(url)
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 let results = data.data.results;
                 console.log(results);
     
@@ -63,23 +64,9 @@ class ShowcaseCarousel extends Component {
 
 
 
-    render() {
-
-        
-       
-       
- 
-
-
-    
-
-
-
-    
-
+    render() {  
         return (
-
-            <section style={carouselStyle}>
+            <section className="carousel-section" style={carouselStyle}>
                 <h1>Spotlight: Spiderman</h1>
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                     <ol className="carousel-indicators">
@@ -87,7 +74,7 @@ class ShowcaseCarousel extends Component {
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-
+                    <div className="container">
                     {/*CAROUSEL INNER*/}
                     <div className="carousel-inner">
 
@@ -98,7 +85,7 @@ class ShowcaseCarousel extends Component {
 
                     </div>
                     {/*end of carousel inner*/}
-
+                        </div>
 
 
                                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -125,17 +112,22 @@ export default ShowcaseCarousel;
 
 const carouselStyle = {
     background: '#2F2F2F',
-    padding: '1rem',
     color: '#fff',
-    margin: '1rem'
+    height: '60vh'
 
 }
 
 const carouselItemInner = {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    margin: '2rem',
-    marginBottom: '10rem'
-
+ 
 }
 
+  const  imageStyle = {
+        height: '50vh'
+}
+
+const captionStyle = {
+    textAlign: 'center',
+    padding: '5rem'
+}

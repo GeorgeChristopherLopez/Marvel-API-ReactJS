@@ -7,7 +7,7 @@ class CharacterPanel extends Component {
         return (
             <section style={showcaseSectionStyle} className="showcase">
 
-                <div className="row mx-5">
+                <div className="row mx-5 py-5">
                    <h1>Get To Know: The Avengers</h1>
                     <div style={showcaseStyle}>
                 <div className="hero-card">

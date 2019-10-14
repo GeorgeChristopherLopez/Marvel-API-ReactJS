@@ -24,8 +24,8 @@ body {
 }
 
 .carousel-item img{
-    width: 100%;
-    padding: 3rem;
+    width: 90% !important;
+
 }
 
 .header-input{
@@ -41,15 +41,6 @@ body {
 }
 
 
-
-.carousel-item{
-    height: 50vh;
-
-}
-.caption{
-    text-align: center;
-    padding: 5rem;
-}
 .news-section{
     padding: 3rem 0rem;
 }

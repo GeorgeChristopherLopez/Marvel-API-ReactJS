@@ -9,8 +9,11 @@ class CarouselItems extends Component {
                     <h3>{this.props.character.name}</h3>
                     <p>{this.props.character.description}</p>
                 </div>
-                <img src={this.props.image} className="rounded img-fluid" alt={this.props.character.name} />
-            </div>
+                <div className="image">
+                        <img style={imageStyle} src={this.props.image}  alt={this.props.character.name} />
+
+               </div>
+             </div>
         </div>
     }
 }
@@ -25,4 +28,8 @@ const carouselItemInner = {
 
 
 
+}
+
+const imageStyle = {
+    borderRadius: '50%'
 }

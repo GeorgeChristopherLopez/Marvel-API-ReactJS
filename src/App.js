@@ -12,10 +12,11 @@ function App() {
       <Router>
       <div className="App">
                 <Header />
-                <News />
+                <CharacterPanel />
          
                 <ShowcaseCarousel />
-                <CharacterPanel />
+
+                <News />
           <Footer />
             </div>
             </Router>
