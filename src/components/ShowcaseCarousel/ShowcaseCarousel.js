@@ -26,7 +26,7 @@ class ShowcaseCarousel extends Component {
         const hash = 'f257af55c3ae44ed8630b7928124f143';
 
         // sinister six spiderman comic
-        const url = 'https://gateway.marvel.com/v1/public/comics/6746/characters?' +
+        const url = 'https://gateway.marvel.com/v1/public/comics/6887/characters?' +
             `ts=${ts}&` +
             `apikey=${publicKey}&` +
             `hash=${hash}`;
@@ -74,7 +74,7 @@ class ShowcaseCarousel extends Component {
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div className="container">
+                    <div className="container" style={{ padding: '1rem' }}>
                     {/*CAROUSEL INNER*/}
                     <div className="carousel-inner">
 
@@ -111,23 +111,11 @@ class ShowcaseCarousel extends Component {
 export default ShowcaseCarousel;
 
 const carouselStyle = {
-    background: '#2F2F2F',
-    color: '#fff',
-    height: '60vh'
+    background: '#000000',
+    color: 'white',
+    height: '50%',
+    padding: '2rem'
 
 }
 
-const carouselItemInner = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
- 
-}
 
-  const  imageStyle = {
-        height: '50vh'
-}
-
-const captionStyle = {
-    textAlign: 'center',
-    padding: '5rem'
-}

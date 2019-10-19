@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CharacterPanel from './components/CharacterPanel/CharacterPanel';
 import ShowcaseCarousel from './components/ShowcaseCarousel/ShowcaseCarousel';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import News from './components/News/News';
 
 
@@ -13,13 +13,11 @@ function App() {
       <div className="App">
                 <Header />
                 <CharacterPanel />
-         
                 <ShowcaseCarousel />
-
                 <News />
-          <Footer />
-            </div>
-            </Router>
+                <Footer />
+      </div>
+      </Router>
   );
 }
 

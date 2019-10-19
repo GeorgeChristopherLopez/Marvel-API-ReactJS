@@ -51,7 +51,7 @@ class News extends Component {
             .then(response => response.json())
             .then(
                 data => {
-                    const posts = data.articles.slice(0, 6);
+                    const posts = data.articles.slice(1, 7);
                     const updatedPosts = posts.map(post => {
                         return <NewsItem
                             title={post.title}
