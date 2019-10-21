@@ -5,6 +5,8 @@ import CharacterPanel from './components/CharacterPanel/CharacterPanel';
 import ShowcaseCarousel from './components/ShowcaseCarousel/ShowcaseCarousel';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import News from './components/News/News';
+import CharacterDetails from './components/CharacterDetails/CharacterDetails';
+import Comics from './components/ComicDetails/Comics';
 
 
 function App() {
@@ -12,9 +14,27 @@ function App() {
       <Router>
       <div className="App">
                 <Header />
-                <CharacterPanel />
-                <ShowcaseCarousel />
-                <News />
+                <Route exact path="/" render={props => (
+                    <React.Fragment>
+                    <CharacterPanel />
+                    <ShowcaseCarousel />
+                    <News />
+                    </React.Fragment>
+
+                )} />
+
+                <Route
+                    path="/search"
+                    render={props => (
+                        <React.Fragment>
+                            <CharacterDetails/>
+                               <Comics/>
+                         
+                        </React.Fragment>
+
+                    )}
+                />
+
                 <Footer />
       </div>
       </Router>

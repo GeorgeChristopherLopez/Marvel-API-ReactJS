@@ -20,13 +20,13 @@ class Header extends Component {
                     <div className="collapse navbar-collapse" id="navbarToggler">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li className="nav-item active">
-                                <Link className="nav-link" to="\">Home <span className="sr-only">(current)</span></Link>
+                                <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="\">Characters</Link>
+                                <Link className="nav-link" to="/search">Characters</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="\">Comics</Link>
+                                <Link className="nav-link" to="/">Comics</Link>
                             </li>
                         </ul> 
                     </div>

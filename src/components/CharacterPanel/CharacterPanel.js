@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 
-
 class CharacterPanel extends Component {
     render() {
         return (
@@ -10,14 +9,15 @@ class CharacterPanel extends Component {
                 <div className="row mx-5 py-5">
                    <h2>Get To Know: The Avengers</h2>
                     <div style={showcaseStyle}>
+              
                 <div className="hero-card">
-                            <img style={imageStyle} src="http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg" alt="First Hero" />
-                    <div>   <p style={captionStyle}>Iron Man</p></div>
-                </div>
-                <div className="hero-card">
-                            <img style={imageStyle} src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/standard_xlarge.jpg" alt="Second Hero"/>
+                            <img style={imageStyle} src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/standard_xlarge.jpg" alt="First Avenger"/>
                     <div>   <p style={captionStyle}>Captain America</p></div>
-                </div>
+                        </div>
+                        <div className="hero-card">
+                            <img style={imageStyle} src="http://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg" alt="Second Avenger" />
+                            <div>   <p style={captionStyle}>Iron Man</p></div>
+                        </div>
                 <div className="hero-card">
                             <img style={imageStyle} src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/standard_xlarge.jpg" alt="Thrid Hero" />
                     <div>   <p style={captionStyle}>Thor</p></div>

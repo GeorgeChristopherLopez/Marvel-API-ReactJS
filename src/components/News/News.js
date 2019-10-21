@@ -38,7 +38,7 @@ class News extends Component {
         const day = date.getDate();
         console.log(year, month, day)
         var url = 'https://newsapi.org/v2/everything?' +
-            'q=+Marvel%20Comics&' +
+            'q=+Marvel+Comics&' +
             'language=en&' +
             `from=${year}-${month}-${day}&` +
             'sortBy=relevance&' +
@@ -51,7 +51,7 @@ class News extends Component {
             .then(response => response.json())
             .then(
                 data => {
-                    const posts = data.articles.slice(1, 7);
+                    const posts = data.articles.slice(0, 6);
                     const updatedPosts = posts.map(post => {
                         return <NewsItem
                             title={post.title}
