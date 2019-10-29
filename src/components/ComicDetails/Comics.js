@@ -5,31 +5,16 @@ import Comic from './Comic';
 
 class Comics extends Component {
     state = {
-        posts:
-            <React.Fragment>
-                <div className="news-card">
-                    <div className="thumbnail"><img src=" http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg" alt="img" /></div>
-                    <div className="title"><p>Powers of X Just Galaxy Brained This Shit</p></div>
-                </div>
-
-
-                <div className="news-card">
-                    <div className="thumbnail"><img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/spiderman-farfromhome-charity.jpg" alt="img" /></div>
-                    <div className="title"><p>Spider-Man Will Stay in the Marvel Cinematic Universe As Disney and Sony Announce New Deal</p></div>
-                </div>
-
-
-                <div className="news-card" >
-                    <div className="thumbnail"><img src="https://nerdist.com/wp-content/uploads/2019/09/HOUSE_POWER_OF_X_HC.jpg" alt="img" /></div>
-                    <div className="title"><p>Which 7 X-Men Characters are the Mystery Mutants of POWERS OF X?</p></div>
-                </div>
-            </React.Fragment>,
-        error: false
+        comics: '',
+              error: false
 
     }
 
-
-    componentDidMount() {
+   
+    constructor(props) {
+        super(props)
+        const searchTerm = props.searchTerm;
+        const characterID = props.characterID;
         // api request details
         const ts = 'timestamp';
         const publicKey = '099657800af174d95a17e1f2b89db4fa';
@@ -38,74 +23,63 @@ class Comics extends Component {
         const hash = 'f257af55c3ae44ed8630b7928124f143';
 
         // sinister six spiderman comic
-        const url = 'https://gateway.marvel.com/v1/public/characters/1009610/comics?' +
-         
+        const url = 'https://gateway.marvel.com/v1/public/characters/' +
+            `${characterID}` +
+            `/comics?` +
             `ts=${ts}&` +
             `apikey=${publicKey}&` +
             `hash=${hash}`;
-
+        console.log(characterID);
         // converts API response into array
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                /*   let results = data.data.results;
+                let results = data.data.results;
                  console.log(results);
-
+          
                let items = []
-                 results.reverse().forEach((character, i) => {
-                     character.id = i;
+                 results.reverse().forEach((comic, i) => {
+                     comic.id = i;
 
-                     const item = <CarouselItem
-                         key={character.id}
-                         character={character}
+                     const item = <Comic
+                         key={comic.id}
+                         comic={comic}
                          extension='.jpg'
-                         image={character.thumbnail.path + '.jpg'}
+                         image={comic.thumbnail.path + '.jpg'}
                      />
                      items.push(item)
 
                  });
-                 this.setState({ carouselItems: items });
-                 console.log(items);*/
+                 this.setState({ comics: items });
+                 console.log(items);
             })
-
-
-
     }
 
     render() {
-
-
         return (
-
-
-            <section className="comics-section">
+            <section className="comics-section" style={comicSectionStyle}>
                 <div className="container">
                     <h1>Comics</h1>
                     <div className="comics" style={comicsStyle}>
-                        {this.state.posts}
-
-
+                        {this.state.comics}
                     </div>
                 </div>
             </section>
-
-
-
         );
-
-
     }
-
 }
 
 export default Comics;
 
-
-
-
 const comicsStyle = {
+    width: '100%',
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridGap: '2rem'
+    gridGap: '1rem',
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    fontSize: '.5rem'
+}
+
+const comicSectionStyle = {
+    
 }

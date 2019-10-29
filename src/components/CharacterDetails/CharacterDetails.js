@@ -4,20 +4,19 @@ import React, { Component } from 'react';
 
 
 class CharacterDetails extends Component {
-    state = {
-        posts:
-            <React.Fragment>
-               
-                    <div><h5 style={{ height: '50vh', textAlign: "center", padding: '1rem', paddingTop: '10rem' }}>Spider-Man</h5></div>
-                    <div><img style={{ height: '50vh' }} src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg" /></div>
-                  </React.Fragment>,
-        error: false
-     
-
-    }
 
 
-    componentDidMount() {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            character: '',
+            characterID: props.characterID,
+            error: false,
+            searchterm: props.searchTerm,
+
+
+        }
         // api request details
             const ts = 'timestamp';
             const publicKey = '099657800af174d95a17e1f2b89db4fa';
@@ -27,7 +26,7 @@ class CharacterDetails extends Component {
 
             // sinister six spiderman comic
         const url = 'https://gateway.marvel.com/v1/public/characters?' +
-                `name=spider-man&` +
+            `name=${this.state.searchterm}&` +
                 `ts=${ts}&` +
                 `apikey=${publicKey}&` +
                 `hash=${hash}`;
@@ -71,9 +70,11 @@ class CharacterDetails extends Component {
             <section className="comics-section">
                 <div className="container">
                     <div className="comics" style={comicsStyle}>
-                        {this.state.posts}
+                            <div><img style={{ height: '50vh' }} src="http://i.annihil.us/u/prod/marvel/i/mg/3/50/526548a343e4b.jpg" /></div>
+                            <div><h5 style={{ height: '50vh', textAlign: "center", padding: '1rem', paddingTop: '10rem' }}>Spider-Man</h5></div>
 
-
+      
+      
                     </div>
                 </div>
             </section>

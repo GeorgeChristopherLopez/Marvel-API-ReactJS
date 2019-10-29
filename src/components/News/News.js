@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import NewsItem from './NewsItem';
 
-
-
 class News extends Component {
     state = {
         posts:
@@ -10,7 +8,7 @@ class News extends Component {
                 <div className="news-card">
             <div className="thumbnail"><img src="https://i.kinja-img.com/gawker-media/image/upload/s--X1PNBRXV--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/pw5dos9s8u58qtpvkg8z.png" alt="img" /></div>
             <div className="title"><p>Powers of X Just Galaxy Brained This Shit</p></div>
-        </div>
+              </div>
 
 
             <div className="news-card">
@@ -28,9 +26,7 @@ class News extends Component {
 
     }
 
-
     componentDidMount() {
-      
         const newsKey = '0f5aaaf46c6943a196e19b750f199b32';
         const date = new Date();
         const year = date.getFullYear();
@@ -43,9 +39,6 @@ class News extends Component {
             `from=${year}-${month}-${day}&` +
             'sortBy=relevance&' +
             `apiKey=${newsKey}`;
-
-
-
 
         fetch(url)
             .then(response => response.json())
@@ -62,39 +55,24 @@ class News extends Component {
                     console.log(updatedPosts)
                     this.setState({ posts: updatedPosts });
                 })
-                  
             .catch(
                 error => {
                     this.setState({ error: true })
                 });
-
-
     }
 
     render() {
-     
-
         return (
-
-
             <section className="news-section">
                 <div className="container">
                     <h1>The News</h1>
                     <div className="news">
                         {this.state.posts}
-                      
-
                     </div>
                 </div>
             </section>
-
-
-
         );
-
-
     }
-
 }
 
 export default News;

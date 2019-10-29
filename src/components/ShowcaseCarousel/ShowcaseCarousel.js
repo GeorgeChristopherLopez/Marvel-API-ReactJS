@@ -5,18 +5,12 @@ import CarouselItem from './CarouselItem'
 class ShowcaseCarousel extends Component {
     constructor(props) {
         super(props)
-
-
         this.state = {
             characters: null,
             carouselItems: null,
         }
-
-
         this.performSearch();
-
     }
-
     performSearch() {
         // api request details
         const ts = 'timestamp';
@@ -30,7 +24,6 @@ class ShowcaseCarousel extends Component {
             `ts=${ts}&` +
             `apikey=${publicKey}&` +
             `hash=${hash}`;
-
         // converts API response into array
         fetch(url)
             .then(response => response.json())
@@ -38,13 +31,9 @@ class ShowcaseCarousel extends Component {
                 console.log(data);
                 let results = data.data.results;
                 console.log(results);
-    
-
-
                 let items = []
                 results.reverse().forEach((character, i) => {
                     character.id = i;
-
                     const item = <CarouselItem
                         key={character.id}
                         character={character}
@@ -52,17 +41,12 @@ class ShowcaseCarousel extends Component {
                         image={character.thumbnail.path + '.jpg'}
                        />
                     items.push(item)
-                   
+                 
                 });
                 this.setState({ carouselItems: items });
                 console.log(items);
             })
-
-     
-
     }
-
-
 
     render() {  
         return (
@@ -80,14 +64,9 @@ class ShowcaseCarousel extends Component {
 
                     {/*CAROUSEL ITEMS*/}
                      {this.state.carouselItems}
-
-
-
                     </div>
                     {/*end of carousel inner*/}
                         </div>
-
-
                                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span className="sr-only">Previous</span>
@@ -98,14 +77,8 @@ class ShowcaseCarousel extends Component {
                                 </a>
                             </div>
             </section>
-
-
-
         );
-
-
     }
-
 }
 
 export default ShowcaseCarousel;

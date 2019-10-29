@@ -33,7 +33,7 @@ class Header extends Component {
 
                     <div>
                         <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2 header-input" type="search" placeholder="Search" aria-label="Search" /><Icon style={headerIconStyle} size={32} icon={ic_search} />
+                            {this.props.show ? <input onChange={this.props.changed}className="form-control mr-sm-2 header-input " type="search" placeholder="Search" aria-label="Search" /> : null}<Icon onClick={this.props.clicked}style={headerIconStyle} size={32} icon={ic_search} />
                          </form>
                     </div>
                     
