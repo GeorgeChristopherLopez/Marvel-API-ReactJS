@@ -55,10 +55,12 @@ class App extends Component  {
                                 <CharacterDetails
                                     searchTerm={this.state.searchTerm}
                                     characterID={this.state.characterID}
+                                
                                  />
                                  < Comics
                                     searchTerm={this.state.searchTerm}
                                     characterID={this.state.characterID}
+                                   
                                  />
                             </React.Fragment>
 
