@@ -5,8 +5,7 @@ import CharacterPanel from './components/CharacterPanel/CharacterPanel';
 import ShowcaseCarousel from './components/ShowcaseCarousel/ShowcaseCarousel';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import News from './components/News/News';
-import CharacterDetails from './components/CharacterDetails/CharacterDetails';
-import Comics from './components/ComicDetails/Comics';
+import Search from './components/Search/Search';
 
 
 class App extends Component  {
@@ -14,7 +13,7 @@ class App extends Component  {
         super(props);
         this.state = {
             searchTerm: 'spider-man',
-            characterID: '1009610',
+        
             showingSearchBar: false
 
         }
@@ -51,18 +50,9 @@ class App extends Component  {
                     <Route
                         path="/search"
                         render={props => (
-                            <React.Fragment>
-                                <CharacterDetails
-                                    searchTerm={this.state.searchTerm}
-                                    characterID={this.state.characterID}
-                                
-                                 />
-                                 < Comics
-                                    searchTerm={this.state.searchTerm}
-                                    characterID={this.state.characterID}
-                                   
-                                 />
-                            </React.Fragment>
+                            <Search
+                                searchTerm={this.state.searchTerm}
+                            />
 
                         )}
                     />
